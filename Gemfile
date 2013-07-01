@@ -8,6 +8,7 @@ gem 'rails', '3.2.13'
 gem 'therubyracer'
 gem 'bootstrap-sass'
 gem 'bcrypt-ruby'
+gem 'annotate'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
