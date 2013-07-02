@@ -16,6 +16,7 @@ class UsersController < ApplicationController
       else
           # flash[:error]="failed!"
       		render 'new'
+          # redirect_to signup_path
     	end
   	end
 end
