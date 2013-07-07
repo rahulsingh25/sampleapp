@@ -4,11 +4,13 @@ gem 'rails', '3.2.13'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
+gem 'faker'
 gem 'therubyracer'
 gem 'bootstrap-sass'
 gem 'bcrypt-ruby'
 gem 'annotate'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -35,7 +37,7 @@ end
 group :test do
 	gem 'capybara'
 	gem 'factory_girl_rails'
-	gem 'cucumber-rails'
+	gem 'cucumber-rails',require: false
 	gem 'database_cleaner'
 end
 
