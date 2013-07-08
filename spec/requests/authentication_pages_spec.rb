@@ -76,6 +76,20 @@ describe "Authentication" do
           it "should render the desired protected page" do
             page.should have_title('Edit user')
           end
+          # A test for forwarding to the default page after friendly forwarding. 
+          describe "when signing in again" do
+            before do
+              delete signout_path
+              visit signin_path
+              fill_in "Email",    with: user.email
+              fill_in "Password", with: user.password
+              click_button "Sign in"
+            end
+
+            it "should render the default (profile) page" do
+              page.should have_title(user.name)
+            end
+          end
         end
       end
 
